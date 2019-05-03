@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Press the Button will create a Notification after 10 seconds."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_wm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WorkManager"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        />
+
+
+    <Button
+        android:id="@+id/button_js"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="JobScheduler"
+        app:layout_constraintTop_toBottomOf="@+id/button_wm"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        />
+
+    <Button
+        android:id="@+id/button_am"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AlarmManager"
+        app:layout_constraintTop_toBottomOf="@+id/button_js"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
