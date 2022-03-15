@@ -1,5 +1,8 @@
 package com.androidfung.notificationtesting;
 
+import static android.app.PendingIntent.FLAG_IMMUTABLE;
+import static android.app.PendingIntent.FLAG_ONE_SHOT;
+
 import android.app.AlarmManager;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -49,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                     .setInitialDelay(10, TimeUnit.SECONDS)
                     .build();
 
-            WorkManager.getInstance().enqueue(workRequest);
+            WorkManager.getInstance(this).enqueue(workRequest);
         });
 
         Button bam = findViewById(R.id.button_am);
@@ -58,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                     .show();
 
             Intent intent = new Intent(this, MyReceiver.class);
-            PendingIntent pi = PendingIntent.getBroadcast(this, 1, intent, PendingIntent.FLAG_ONE_SHOT);
+            PendingIntent pi = PendingIntent.getBroadcast(this, 1, intent, FLAG_ONE_SHOT + FLAG_IMMUTABLE);
             AlarmManager am = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
             am.setExactAndAllowWhileIdle(AlarmManager.ELAPSED_REALTIME_WAKEUP,
                     SystemClock.elapsedRealtime() + 10 * 1000, pi);

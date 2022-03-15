@@ -20,33 +20,30 @@
 
     <Button
         android:id="@+id/button_wm"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="WorkManager"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintLeft_toRightOf="parent"
         app:layout_constraintRight_toLeftOf="parent"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 
     <Button
         android:id="@+id/button_js"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="JobScheduler"
-        app:layout_constraintTop_toBottomOf="@+id/button_wm"
         app:layout_constraintLeft_toRightOf="parent"
         app:layout_constraintRight_toLeftOf="parent"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/button_wm" />
 
     <Button
         android:id="@+id/button_am"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="AlarmManager"
-        app:layout_constraintTop_toBottomOf="@+id/button_js"
         app:layout_constraintLeft_toRightOf="parent"
         app:layout_constraintRight_toLeftOf="parent"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/button_js" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
